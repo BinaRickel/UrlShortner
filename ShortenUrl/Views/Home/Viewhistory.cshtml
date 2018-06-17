@@ -1,0 +1,23 @@
+﻿@using  ShortenUrl.Data
+@model IEnumerable<URL>
+<div class="row">
+    <div class="col-md-10 col-md-offset-1 well">
+        <table class="table table-bordered">
+            <tr>
+                <th>Url</th>
+                <th>Views</th>
+            </tr>
+            @foreach (var url in Model)
+            {
+                <tr>
+                    <td>
+                        <a href="@url.RealURL">@url.RealURL</a>
+                    </td>
+                    <td>
+                        @url.Views
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+
